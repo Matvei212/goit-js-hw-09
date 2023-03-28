@@ -21,12 +21,13 @@ const options = {
   defaultDate: new Date(),
   minuteIncrement: 1,
   onClose(selectedDates) {
-    if (options.defaultDate > selectedDates[0]) {
-      Notiflix.Notify.failure('Please choose a date in the future');
-    }
-    startBtnRef.removeAttribute('disabled');
+  if (options.defaultDate > selectedDates[0]) {
+    Notiflix.Notify.failure('Please choose a date in the future');
+  } else {
     deadlineValue = selectedDates[0];
-  },
+    startBtnRef.removeAttribute('disabled');
+  }
+}
 };
 flatpickr(inputFlatpickrRef, options);
 
