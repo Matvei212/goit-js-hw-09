@@ -18,7 +18,7 @@ img {
 }
 .timer {
   display: flex;
-  color: blue;
+  color: tomato;
   gap: 40px;
   font-size: 40px;
 }
